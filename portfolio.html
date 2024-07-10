@@ -1,0 +1,620 @@
+<html>
+    <head>
+        <title>Portfolio</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: 'popins', sans-serif;
+                box-sizing: border-box;
+            }
+            body{
+                background-color:#010127 ;
+                color:#fff ;
+               }
+            #header{
+                width: 100%;
+                height: 100vh;
+            }
+            .logo{
+                 color: orange;
+                 font-size: 3.6vw;
+                 font-family: 'Times New Roman', Times, serif;
+                 padding-left: 20px;
+                 float: left;
+                 padding-top: 20px;
+                 width: 140px;
+            }
+            .Container{
+                padding: 10px 10%;
+            }
+            nav{
+                display: flex;
+                align-items:center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            nav ul li{
+                display: inline-block;
+                list-style: none;
+                margin: 10px 20px ;
+                padding-top: 20px;
+            }
+            nav ul li a{
+                color: #fff;
+                text-decoration: none;
+                font-size: 18px ;
+                position: relative;
+            }
+            nav ul li a::after{
+                content: '';
+                width: 0;
+                height: 3px;
+                background:orange;
+                position: absolute;
+                left: 0;
+                bottom: -6px;
+                transition: 0.5s;
+            }
+            nav ul li a:hover::after{
+                width: 100%;;
+            }
+            .header-text{
+                margin-top: 20%;
+                font-size: 30px;
+            }
+            .header-text h1{
+                font-size: 60px;
+                margin-top: 20px;
+            }
+             span{
+                color: orange;
+            }
+            .btn-box{
+                margin-top: 20px;
+                display: inline-block;
+                padding: 12px 28px;
+                background: orange;
+                border-radius: 40px;
+                font-size: 18px;
+                color: #fff;
+                letter-spacing: 1px;
+                text-decoration: none;
+                font-weight: 600;
+                
+            }
+            .btn-box:hover{
+                box-shadow: 0 0 5px orange,
+                0 0 25px orange,
+                0 0 50px orange,
+                0 0 100px orange,
+                0 0 200px orange;   
+            }
+            .image{
+                width: 45%;
+                height: 80%;
+                position: absolute;
+                bottom: 0;
+                right: 100px;
+            }
+            .image img{
+                height: 100%;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+                transition: bottom 1s, left 1s;
+                
+            }
+            .image:hover .shapes{
+                bottom: 40px;
+            }
+            .image:hover .image{
+                left: 45%;
+            }
+            .text{
+                font-size: 40px;
+                font-weight: bold;
+                color: orange;
+                animation: bounce 2s infinite ;
+            }
+            @keyframes bounce {
+                0%, 100%{
+                    transform: translateY(0);
+                }
+                50%{
+                    transform: translateY(-20px);
+                }
+            }
+             /*-----------about meee---------*/
+             #about{
+                padding: 50px 0px;
+                color: #fff;
+             }
+             .row{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+             }
+             .about-col-1{
+                flex-basis: 35%;
+             }
+             .about-col-1 img{
+                width: 100%;
+                height: 100%;
+                padding-top: 50px;
+                border-radius: 15px ;
+             }
+             .about-col-2{
+                flex-basis: 60%;
+            
+             }
+             .subtitle{
+                font-size: 60px;
+                font-weight: 600;
+                color: #fff;
+                text-align: center;
+             }
+             .about-col-2 p{
+                font-size: 25px;
+                padding-top: 10px;
+                text-align: justify;
+             }
+            /*---------my services---------*/
+            #Services{
+            color: #EAA221;
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 4rem;
+            }
+            .subtitle{
+                text-align: center;
+                font-size: 60px;
+               }
+            .services-list{
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(259px, 1fr));
+                grid-gap: 40px;
+                margin-top: 50px;
+            }
+            .services-list div{
+                background-color: transparent;
+                padding: 40px;
+                font-size: 13px;
+                font-weight: 13px;
+                border-right: 10px;
+                border-radius: 20px;
+                transition: background 0.5s;
+                transform: 0.5s;
+                box-shadow: 1px 1px 20px #E6812F,
+                1px 1px 40px orange  ;
+            }
+            .services-list i{
+                font-size: 50px;
+                margin-bottom: 30px;
+            }
+            .services-list div h2{
+                font-size: 30px;
+                font-weight: 500;
+                margin-bottom: 15px;
+                color: #FFF;
+            }
+            .services-list div p{
+                color: #fff;
+            }
+            .services-list div a{
+                text-decoration: none;
+                margin-top: 10px;
+                display: inline-block;
+                padding: 12px 28px;
+                background: orange;
+                border-radius: 40px;
+                font-size: 12px;
+                color: #fff;
+                letter-spacing: 1px;
+                text-decoration: none;
+                font-weight: 300;
+
+            }
+            .services-list div:hover{
+                background: #CC5500;
+                transform: translateY(-10px);
+            }
+            
+            /*----------education-----------*/
+            .timeline-list{
+                width: 100%;
+                padding: 35px 10%;
+            }
+            main.timeline{
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 20px;
+            }
+            .col .timeline-items{
+                padding: 0px 30px;
+                border-left: 5px solid orange;
+            }
+            .col .timeline-items .box{
+                position: relative;
+                padding: 20px;
+                border: 2px solid #ccc;
+                background-color: #010130;
+                cursor: pointer;
+                transition: all 0.4s;
+                margin-bottom: 20px;
+            }
+            .col .timeline-items .box:hover{
+                box-shadow: 0px 3px 12px 0px #ccc;
+            }
+            .col .timeline-items .box::before{
+                content: '';
+                position: absolute;
+                width:40px ;
+                height: 40px;
+                border-radius: 50%;
+                right: 100%;
+                top: 0;
+                background: orange;
+                border: 2px solid #ccc;
+            }
+            .box h3{
+                font-size: 20px;
+                color: orange;
+                position: relative;
+            }
+            .box h2{
+                font-size: 22px;
+                padding: 10px 0px 6px;
+                color:#ccc ;
+            }
+            .box p{
+                line-height: 1.2;
+                color: wheat;
+                font-size: 20px;
+            }
+            /*----------portfolio-----------*/
+            #portfolio{
+                padding: 50px 0;
+            }
+            .work-list{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                grid-gap: 40px;
+                margin-top: 50px ;
+            }
+            .work{
+                border-radius: 10px;
+                position:relative;
+                overflow: hidden;
+            }
+            .work img{
+                width:100%;
+                border-radius: 10px;
+                display: block;
+                transition: transform 0.5s;
+            }
+            .layer{
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(rgba(0,0,0,0.6),#ffa500);
+                border-radius: 10px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 0 40px;
+                text-align: center;
+                font-size: 14px;
+                transition: height  0.5s;
+            }
+            .layer h3{
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+            .layer a{
+                margin-top: 20px;
+                color:#CC5500;
+                text-decoration: none;
+                font-size: 22px;
+                line-height: 60px;
+                background: #fff;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                text-align: center;
+            }
+            .work:hover img{
+                transform: scale(1.1);
+            }
+            .work:hover .layer{
+                height: 100%;
+            }
+            .btn{
+                display: block;
+                margin: 50px auto;
+                width: fit-content;
+                border:2px solid #E6812F;
+                padding: 14px 50px;
+                border-radius: 6px;
+                text-decoration: none;
+                color: #FFF;
+                font-size: 18px;
+                transition: background 0.5s;
+            }
+            .btn:hover{
+                background: #ffa500;
+            }
+            /*-----------------CONTACT-----------------*/
+            .contact-left{
+                flex-basis: 35%;
+            }
+            .contact-right{
+                flex-basis: 60%;
+            }
+            .contact-left p{
+                margin-top: 30px;
+                font-size: 20px;
+            }
+            .contact-left p i{
+                color: #E6812F;
+                margin-right:15px ;
+                font-size: 25px;
+            }
+            .social-icons{
+                margin-top: 30px;
+            }
+            .social-icons a{
+                text-decoration: none;
+                font-size: 30px;
+                margin-right: 15px;
+                color: #ababab;
+                display: inline-block;
+                transition: transform 0.5s;
+            }
+            .social-icons a:hover{
+                color: orange;
+                transform: translateY(-5px);
+            }
+            .contact-right form{
+                width: 100%;
+            }
+            form input, form textarea{
+                width: 100%;
+                border: 4px solid orange;
+                outline: none;
+                background-color: #010130;
+                padding: 15px;
+                margin: 15px 0;
+                color: white;
+                font-size: 18px;
+                border-radius: 6px;
+            }
+            .copyright{
+                width: 100%;
+                text-align: center;
+                padding: 25px 0;
+                background: #EAA221;
+                font-weight: 300;
+                margin-top: 20px;
+                font-size: 20px;
+            }
+            .copyright i{
+                color: red;
+            }
+        /*css for small screen */
+        @media only screen and (max-with:600px){
+            .header{
+                margin-top: 100%;
+                font-size: 16px;
+            }
+            .header-text h1{
+                font-size:30px;
+            }
+        }
+        </style>
+    </head>
+    <body>
+         <div id="header">
+             <div class="Container">
+                 <nav>
+                     <h1 class="logo">ShanZa.</h1>
+                     <ul>
+                         <li><a href="#header">Home</a></li>
+                         <li><a href="#about">About</a></li>
+                         <li><a href="#Services">Services</a></li>
+                         <li><a href="#education">Education</a></li>
+                         <li><a href="#portfolio">Portfolio</a></li>
+                         <li><a href="#contact">Contact Me</a></li>
+                     </ul>
+                </nav>
+                 <div class="header-text">
+                     <p class="text">Front-end Developer</p>
+                     <h1>Hi, I'm <span>Shanza</span><br> from Sukkur</h1>
+                     <a href="SHANZA_RESUME.pdf" class="btn-box">Download CV</a>
+                 </div>
+                  <div class="image">
+                    <img src="shapes.png" class="shape">
+                    <img src="images.png" class="girl">
+                  </div>
+                </div>
+          </div>
+          <!--about me --> 
+          <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="image1.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="subtitle">About <span>Me</span></h1>
+                          <p> Hi, I'm Shanza, a frontend website developer. As a Frontend Developer proficient in HTML, CSS, and JavaScript, 
+                            I specialize in crafting engaging and user-friendly web interfaces.
+                            With a keen eye for design and a strong command of frontend technologies,
+                            I collaborate closely with cross-functional teams to translate design
+                            mockups into responsive and interactive web experiences. Leveraging my
+                            expertise in HTML for structuring content, CSS for styling, and JavaScript
+                            for dynamic functionality, I strive to create seamless digital solutions that
+                            prioritize usability and accessibility.</p>                    </div>
+                </div>
+            </div>
+          </div>
+          <!--skills --> 
+          <section>
+            <div id="Services">
+                <div class="container">
+                    <h1 class="subtitle">My <span>Services</span></h1>
+                    <div class="services-list">
+                        <div>
+                            <i class='bx bxl-html5' style='color:#ffa500' ></i>
+                            <h2>Frontend developer</h2>
+                            <p>Crafting captivating user interfaces with pixel-perfect precision, 
+                                I specialize in bringing your digital vision to life through elegant
+                                 frontend development. With a keen eye for design and expertise in
+                                  cutting-edge technologies, I ensure seamless user experiences that
+                                   elevate your brand's online presence. Let's transform your ideas
+                                    into interactive masterpieces that engage and inspire.</p>
+                                    <a href="#" class="read">Learn more </a>
+                        </div>
+                        <div>
+                            <i class='bx bxl-sketch' style='color:#ffa500' ></i>
+                            <h2>Graphic Designer</h2>
+                            <p>Infusing creativity into every pixel, I design visually stunning
+                                 graphics that captivate and inspire. From branding to digital assets,
+                                  I specialize in crafting cohesive visual identities that resonate 
+                                  with your audience. Let's elevate your brand with designs that leave
+                                   a lasting impression.</p>
+                                   <a href="#" class="read">Learn more </a>
+                        </div>
+                        <div>
+                            <i class="bx bx-code-alt"style='color:#ffa500'></i>
+                            <h2>Web Developer</h2>
+                            <p>Harnessing the power of Microsoft Office, I specialize in maximizing
+                                 productivity and efficiency through tailored solutions. From advanced
+                                  Excel formulas to dynamic PowerPoint presentations, I optimize workflows
+                                   to meet your specific needs. Let's elevate your business with expertly 
+                                   crafted documents and presentations that make a lasting impact.</p>
+                                   <a href="#" class="read">Learn more </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!------------EDUCATION---------->
+        <div class="timeline-list" >
+            <main class="timeline">
+        <section class="col" id="education">
+            <h1 class="subtitle" style="padding-bottom: 20px;">My <span>Education</span></h1>
+            <div class="timeline-items">
+                <div class="box">
+                    <h3>2017-2018</h3>
+                    <h2>SSC Degree</h2>
+                    <p>Completed Matriculation in Group Science<br> From Star Public High School Sukkur. </p>
+                </div>
+                <div class="box">
+                    <h3>2019-2020</h3>
+                    <h2>HSC Degree</h2>
+                    <p>Completed intermediate in Pre-Medical<br> From Govt. Girls Degree College Sukkur.</p>
+                </div>
+                <div class="box">
+                    <h3>2021-2022</h3>
+                    <h2>Diploma Degree</h2>
+                    <p>Completed Diploma in Informatiom Technology<br> From SAKI Institute Sukkur .</p>
+                </div>
+                <div class="box">
+                    <h3>2023-2026</h3>
+                    <h2>Graduation in BSCS</h2>
+                    <p>BS Computer Science <br> From Begum Nusrat Bhutto Women University Sukkur.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+     <!------------portfolio--------------->
+        <div id="portfolio">
+             <div class="container">
+                 <h1 class="subtitle">MY <span>Work</span></h1>
+                 <div class="work-list">
+                    <div class="work">
+                        <img src="work-1.png">
+                        <div class="layer">
+                            <h2>Social Media App</h2>
+                            <p>The app connects you to the talented people around the world.
+                                Download it from play store.</p>
+                                <a href="#" class='bx bx-link-external'></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="work-2.png">
+                        <div class="layer">
+                            <h2>Online Shopping</h2>
+                            <p>Online shopping involves purchasing products or services over the
+                                 Internet. Online shopping is done through an online shop, e-shop,
+                                  e-store, virtual store, webshop, Internet shop or online store. </p>
+                                <a href="#" class='bx bx-link-external'></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="work-3.png">
+                        <div class="layer">
+                             <h2>Music App</h2>
+                             <p> A music streaming app is an online music app that
+                                 helps users to listen to their favorite songs online. 
+                                 There are two types of music apps- audio and video.</p>
+                             <a href="#" class='bx bx-link-external'></a>
+                        </div>
+                    </div>
+                 </div>
+                 <a href="#" class="btn">See more</a>
+             </div>
+        </div>
+        <!--------------Contact---------------->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="subtitle">Contact <span>Me</span></h1>
+                          <p><i class='bx bx-envelope'></i>Contact@example.com</p>
+                          <p><i class='bx bxs-phone-call'></i>03324567895</p>
+                          <div class="social-icons">
+                             <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                             <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                             <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                          </div>
+                          <a href="SHANZA_RESUME.pdf" class="btn-box">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn-box">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>copyright © Shanza.<i class='bx bxs-heart'></i>portfolio website</p>
+            </div>
+        </div><script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbx50brwFw-APJmMyY6k92m7e_G_yqvvu4heuZwlHIT_Gvm52D7FTzjxVw2DJJablMvn/exec'
+            const form = document.forms['submit-to-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+           } )
+            
+          </script>
+        
+    
+    </body>
+</html>
